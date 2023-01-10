@@ -9,42 +9,18 @@ use Doctrine\ORM\Mapping as ORM;
 #[ApiResource]
 class User
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
     #[ORM\Id, ORM\Column, ORM\GeneratedValue]
-    private $id;
+    public int $id;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="username", type="string", length=15, nullable=false)
-     */
     #[ORM\Column]
-    private $username;
+    public string $username;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="password", type="string", length=255, nullable=false)
-     */
-    private $password;
+    #[ORM\Column]
+    public string $password;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="email", type="string", length=32, nullable=false)
-     */
-    private $email;
+    #[ORM\Column]
+    public string $email;
 
-    /**
-     * @var int|null
-     *
-     * @ORM\Column(name="role", type="integer", nullable=true)
-     */
-    private $role;
+    #[ORM\Column]
+    public ?int $role;
 }

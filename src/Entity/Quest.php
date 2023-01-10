@@ -9,63 +9,27 @@ use Doctrine\ORM\Mapping as ORM;
 #[ApiResource]
 class Quest
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
     #[ORM\Id, ORM\Column, ORM\GeneratedValue]
-    private $id;
+    public int $id;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="character_id", type="integer", nullable=false)
-     */
     #[ORM\Column]
-    private $characterId;
+    public int $characterId;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="quest", type="string", length=70, nullable=false)
-     */
-    private $quest;
+    #[ORM\Column]
+    public string $quest;
 
-    /**
-     * @var bool
-     *
-     * @ORM\Column(name="completed", type="boolean", nullable=false)
-     */
-    private $completed;
+    #[ORM\Column]
+    public bool $completed;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="task1", type="integer", nullable=false)
-     */
-    private $task1;
+    #[ORM\Column]
+    public int $task1;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="task2", type="integer", nullable=false)
-     */
-    private $task2;
+    #[ORM\Column]
+    public int $task2;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="task3", type="integer", nullable=false)
-     */
-    private $task3;
+    #[ORM\Column]
+    public int $task3;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="task4", type="integer", nullable=false)
-     */
-    private $task4;
+    #[ORM\Column]
+    public int $task4;
 }
